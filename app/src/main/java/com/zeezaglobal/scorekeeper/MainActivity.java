@@ -7,7 +7,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
 public class MainActivity extends AppCompatActivity {
-
+//Athul Babu - A00244116
+    //Meghna Aravind - A00256942
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
