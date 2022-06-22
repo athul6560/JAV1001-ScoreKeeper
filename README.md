@@ -32,8 +32,8 @@ Explain how to run the automated tests for this system
 
 ## Authors
 
-  - **Athul Babu** - *A00244116* -
-    [PurpleBooth](https://github.com/PurpleBooth)
-  - **Meghna Aravind** - *A00256942* -
+  - **Athul Babu** - *A00244116*
+
+  - **Meghna Aravind** - *A00256942*
 
 
