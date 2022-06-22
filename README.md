@@ -1,21 +1,16 @@
-# Project Title
+# Score Keeper
 
-One Paragraph of the project description
-
-Initially appeared on
-[gist](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2). But the page cannot open anymore so that is why I have moved it here.
+Lab 4 JAV001
 
 ## Getting Started
 
-These instructions will give you a copy of the project up and running on
-your local machine for development and testing purposes. See deployment
-for notes on deploying the project on a live system.
+A Simple score keeping app in which the user can update the scores of two teams.
 
 ### Prerequisites
 
 Requirements for the software and other tools to build, test and push 
-- [Example 1](https://www.example.com)
-- [Example 2](https://www.example.com)
+- [Android Studio](https://developer.android.com/studio?gclid=CjwKCAjw-8qVBhANEiwAfjXLrgkwtSZMVr8QN1lfCJOBmFBu8so5qWzVObASZAdZU2eQ7a4WoYg_nxoCNT8QAvD_BwE&gclsrc=aw.ds)
+
 
 ### Installing
 
