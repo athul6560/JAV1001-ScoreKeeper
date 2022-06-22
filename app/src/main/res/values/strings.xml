@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Score Keeper</string>
+    <string name="game_name">American Foodball</string>
+    <string-array name="score_array">
+        <item>Select different score...</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>6</item>
+
+    </string-array>
+</resources>
