@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private Switch teamSwitch;
    private Spinner spinner;
    private TextView score_a,score_b;
+   //store the score value as two variables
    private int score_valuea=0,score_valueb=0;
 
 
@@ -38,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         spinner.setAdapter(adapter);
         addScore.setOnClickListener(view -> {
             if(!teamSwitch.isChecked()){
+                //getting the spinner value and converting it into integer value to do the calculation
                 score_valuea= score_valuea+ Integer.parseInt(spinner.getSelectedItem().toString());
                 score_a.setText(score_valuea+"");
             }else{
@@ -46,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
+        //same as the add logic
         reduceScore.setOnClickListener(view -> {
             if(!teamSwitch.isChecked()){
                 score_valuea=score_valuea-Integer.parseInt(spinner.getSelectedItem().toString());
