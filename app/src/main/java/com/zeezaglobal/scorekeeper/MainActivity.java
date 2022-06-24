@@ -3,6 +3,7 @@ package com.zeezaglobal.scorekeeper;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
@@ -37,23 +38,24 @@ public class MainActivity extends AppCompatActivity {
         spinner.setAdapter(adapter);
         addScore.setOnClickListener(view -> {
             if(!teamSwitch.isChecked()){
-                score_valuea=score_valuea+1;
+                score_valuea= score_valuea+ Integer.parseInt(spinner.getSelectedItem().toString());
                 score_a.setText(score_valuea+"");
             }else{
-                score_valueb=score_valueb+1;
+                score_valueb=score_valueb+Integer.parseInt(spinner.getSelectedItem().toString());
                 score_b.setText(score_valueb+"");
             }
 
         });
         reduceScore.setOnClickListener(view -> {
             if(!teamSwitch.isChecked()){
-                score_valuea=score_valuea-1;
+                score_valuea=score_valuea-Integer.parseInt(spinner.getSelectedItem().toString());
                 score_a.setText(score_valuea+"");
             }else{
-                score_valueb=score_valueb-1;
+                score_valueb=score_valueb-Integer.parseInt(spinner.getSelectedItem().toString());
                 score_b.setText(score_valueb+"");
             }
         });
+
 
     }
 
