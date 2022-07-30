@@ -3,24 +3,22 @@ package com.zeezaglobal.scorekeeper;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     //Athul Babu - A00244116
     //Meghna Aravind - A00256942
-    private ImageButton addScore, reduceScore;
+    private Button addScore, reduceScore;
     private Switch teamSwitch;
-   private Spinner spinner;
-   private TextView score_a,score_b;
-   //store the score value as two variables
-   private int score_valuea=0,score_valueb=0;
+    private Spinner spinner;
+    private TextView score_a, score_b;
+    //store the score value as two variables
+    private int score_value_a = 0, score_value_b = 0;
 
 
     @Override
@@ -38,24 +36,24 @@ public class MainActivity extends AppCompatActivity {
 // Apply the adapter to the spinner
         spinner.setAdapter(adapter);
         addScore.setOnClickListener(view -> {
-            if(!teamSwitch.isChecked()){
+            if (!teamSwitch.isChecked()) {
                 //getting the spinner value and converting it into integer value to do the calculation
-                score_valuea= score_valuea+ Integer.parseInt(spinner.getSelectedItem().toString());
-                score_a.setText(score_valuea+"");
-            }else{
-                score_valueb=score_valueb+Integer.parseInt(spinner.getSelectedItem().toString());
-                score_b.setText(score_valueb+"");
+                score_value_a = score_value_a + Integer.parseInt(spinner.getSelectedItem().toString());
+                score_a.setText(score_value_a + "");
+            } else {
+                score_value_b = score_value_b + Integer.parseInt(spinner.getSelectedItem().toString());
+                score_b.setText(score_value_b + "");
             }
 
         });
         //same as the add logic
         reduceScore.setOnClickListener(view -> {
-            if(!teamSwitch.isChecked()){
-                score_valuea=score_valuea-Integer.parseInt(spinner.getSelectedItem().toString());
-                score_a.setText(score_valuea+"");
-            }else{
-                score_valueb=score_valueb-Integer.parseInt(spinner.getSelectedItem().toString());
-                score_b.setText(score_valueb+"");
+            if (!teamSwitch.isChecked()) {
+                score_value_a = score_value_a - Integer.parseInt(spinner.getSelectedItem().toString());
+                score_a.setText(score_value_a + "");
+            } else {
+                score_value_b = score_value_b - Integer.parseInt(spinner.getSelectedItem().toString());
+                score_b.setText(score_value_b + "");
             }
         });
 
@@ -64,11 +62,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void initComponents() {
         spinner = (Spinner) findViewById(R.id.score_spinner);
-        addScore=findViewById(R.id.score_add_btn);
-        reduceScore=findViewById(R.id.score_sub_btn);
-        score_a=findViewById(R.id.score_a);
-        score_b=findViewById(R.id.score_b);
-        teamSwitch=findViewById(R.id.team_switch);
+        addScore = findViewById(R.id.score_add_btn);
+        reduceScore = findViewById(R.id.score_sub_btn);
+        score_a = findViewById(R.id.score_a);
+        score_b = findViewById(R.id.score_b);
+        teamSwitch = findViewById(R.id.team_switch);
 
     }
 }
