@@ -3,12 +3,15 @@ package com.zeezaglobal.scorekeeper;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     //Athul Babu - A00244116
@@ -59,7 +62,24 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_example, menu);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.about:
+                Toast.makeText(this, "Athul Babu Meghana Aravind - JAV1001", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.setting:
+                // do something
+                return true;
+            default:
+                return super.onContextItemSelected(item);
+        }
+    }
     private void initComponents() {
         spinner = (Spinner) findViewById(R.id.score_spinner);
         addScore = findViewById(R.id.score_add_btn);
