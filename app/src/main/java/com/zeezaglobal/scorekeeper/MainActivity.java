@@ -67,7 +67,7 @@ getSCoreFromLocal();
 
 
     }
-
+//function used to update the values on startup
     private void getSCoreFromLocal() {
         score_a.setText(SharedPref.GetScoreA(MainActivity.this)+"");
         score_b.setText(SharedPref.GetScoreB(MainActivity.this)+"");

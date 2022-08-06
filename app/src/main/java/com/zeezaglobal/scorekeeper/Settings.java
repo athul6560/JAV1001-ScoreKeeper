@@ -8,6 +8,7 @@ import android.widget.Switch;
 import android.widget.Toast;
 
 public class Settings extends AppCompatActivity {
+    //constant used to know thw status of the switch globally
 public static boolean STORE_STATUS=true;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
