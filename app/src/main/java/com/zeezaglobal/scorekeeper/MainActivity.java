@@ -2,6 +2,7 @@ package com.zeezaglobal.scorekeeper;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -71,10 +72,10 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.about:
-                Toast.makeText(this, "Athul Babu Meghana Aravind - JAV1001", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Athul Babu , Meghana Aravind - JAV1001", Toast.LENGTH_SHORT).show();
                 return true;
             case R.id.setting:
-                // do something
+                startActivity(new Intent(MainActivity.this,Settings.class));
                 return true;
             default:
                 return super.onContextItemSelected(item);
