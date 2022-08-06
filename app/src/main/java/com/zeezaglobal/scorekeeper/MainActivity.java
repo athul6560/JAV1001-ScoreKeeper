@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         //creating a function for initialising the components
         initComponents();
-
+getSCoreFromLocal();
 // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.score_array, android.R.layout.simple_spinner_item);
@@ -44,9 +44,11 @@ public class MainActivity extends AppCompatActivity {
                 //getting the spinner value and converting it into integer value to do the calculation
                 score_value_a = score_value_a + Integer.parseInt(spinner.getSelectedItem().toString());
                 score_a.setText(score_value_a + "");
+                SharedPref.StoreScoreA(this,score_value_a);
             } else {
                 score_value_b = score_value_b + Integer.parseInt(spinner.getSelectedItem().toString());
                 score_b.setText(score_value_b + "");
+                SharedPref.StoreScoreB(this,score_value_b);
             }
 
         });
@@ -55,14 +57,22 @@ public class MainActivity extends AppCompatActivity {
             if (!teamSwitch.isChecked()) {
                 score_value_a = score_value_a - Integer.parseInt(spinner.getSelectedItem().toString());
                 score_a.setText(score_value_a + "");
+                SharedPref.StoreScoreA(this,score_value_a);
             } else {
                 score_value_b = score_value_b - Integer.parseInt(spinner.getSelectedItem().toString());
                 score_b.setText(score_value_b + "");
+                SharedPref.StoreScoreB(this,score_value_b);
             }
         });
 
 
     }
+
+    private void getSCoreFromLocal() {
+        score_a.setText(SharedPref.GetScoreA(MainActivity.this)+"");
+        score_b.setText(SharedPref.GetScoreB(MainActivity.this)+"");
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_example, menu);
